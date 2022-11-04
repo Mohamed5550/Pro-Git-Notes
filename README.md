@@ -10,7 +10,6 @@ You can find the notes of each chapter in the folder of that chapter.
 
 ## In this file I will write the notes of the introduction of the book
 
----
 
 ### Summary for the 10 chapter and 3 appendicies
 
