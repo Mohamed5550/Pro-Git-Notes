@@ -81,7 +81,7 @@
 - git config --global user.email johndoe@example.com
 - If you want to save it globally, pass the --globla option, if you want to run it to the current project only, don't pass it
 - git config --global core.editor emacs: this make the defualt editor emacs
-- git config --global init.defaultBranc main: for default branch name
+- git config --global init.defaultBranch main: for default branch name
 - git config --list: to check your config
 - you can pass --show-origin to show tha path of the config file for that value
 

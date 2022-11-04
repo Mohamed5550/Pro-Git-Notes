@@ -75,4 +75,36 @@
   - git restore
 
     - *git restore --staged [file]*: unstages a file
-    - *git restore*: resets the working tree
+    - *git restore*: resets the working tree  // dangerous
+
+  - Working with remotes
+    - Remotes are versions of your project hosted in the internet somewher
+    - *git remote*: shows the remote for your repo
+    - *git remote -v*: shows the link of the remote with the name
+    - *git remote add {name} {url}*: to add a new remote
+    - *git fetch {remoteName}*: gets the data that the remote have but you don't have yet
+    - *git pull {remoteName}*: fetch + merge
+    - *git push {remote} {branch}*: pushes the changes to the remote
+    - before you can push you should pull the last changes
+    - *git remote rename {oldName} {newName}*: rename
+    - *git remote remove (or rm) {remoteName}*: remove
+  
+  - Tagging
+    - *git tag*: lists all the tag
+    - *git tag -l "v1.5.\*"*: lists tags with a pattern
+    - *git show {tagName}*: to show tag
+    - types:
+      - annotated tags: "git tag -a {tagName} -m '' "
+      - ligtweight tags: "git tag {tagName}"
+    - *git tag -a {tagName} {commitHash}*: to tag a past commit
+    - git push doesn't share the tags
+    - *git push origin {tagName}*: to push a tag
+    - or *git push --tags*
+    - --follow-tags: will push only annonated tags
+    - *git tag -d {tagName}*: delete a tag
+    - *git push origin :refs/tags/{tagName}*: delete a tag
+    - *git push origin --delete {tagName}*: delete a tag (simpler)
+  
+  - Git Aliasing
+    - *git config --global alias.{short} {long}*
+    - *git config --global alias.{short} '!{long}'*: for running externals commands (note the !)
