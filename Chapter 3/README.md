@@ -47,3 +47,4 @@
     - Don't rename a branch that is still in use by other collaborator
     - *git branch --move old-name new-name*: renames a branch locally
     - *git push --set-upstream origin new-name*: to let others see the corrected branch
+    - *git push origin --delete old-name*: to delete the branch on the remote
