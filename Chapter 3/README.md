@@ -48,3 +48,40 @@
     - *git branch --move old-name new-name*: renames a branch locally
     - *git push --set-upstream origin new-name*: to let others see the corrected branch
     - *git push origin --delete old-name*: to delete the branch on the remote
+
+- ## Branching workflow
+
+  - common workflows to follow when working with brances
+  - Long Running Branches: like develop branch
+  - Topic Branches: short branches for features ans issues
+
+- ## Remote Branches
+
+  - remote-tracking branches
+    - *git clone -o {hello}*: clones and makes the main remote "hello"
+    - *git fetch {remote}*: to syncronize the remote branch with the local branch
+  
+  - Pushing:
+    - *git push {remote} {branch}*
+    - *git push {remote} {localBranch}:{remoteBranch}*
+    - *git config --global credential.helper cache*: to cache the login data for some minutes in memory
+    - *git merge {remote}/{remoteBranch}*: to merge the fetched branch into a local branch
+    - *git checkout -b {localBranch} {remote}/{remoteBranch}*: same as above
+
+  - Pulling:
+    - *git pull* = *git fetch* + *git merge*
+    - It's better to use them explicitly
+  
+- ## Tracking Branches
+
+  - Tracking branch: the local branch that tracks a remote branch
+  - Upstrea branch: the remote branch that is being tracked
+  - *git pull* inside a branch: the server knows automatically where server to go and where branch to pull
+  - *git checkout --track {remote}/{branch}*: creates a branch and makes it track the remote branch
+  - *git checkout {branch}*: creates a tracking branch if
+    - the name deosn't exist
+    - it matches a branch in only one remote
+  - *git branch -u {remote}/{branchc}*: to change the upstream branch of the current branch
+  - *@{u}* or *@{upstream}*: reference to the upstream branch like "origin/master" ex: *git merge @{u}*
+  - *git branch -vv*: to show tracking branches
+  - *git fetch --all*: fetches from all remotes
