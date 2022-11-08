@@ -85,3 +85,17 @@
   - *@{u}* or *@{upstream}*: reference to the upstream branch like "origin/master" ex: *git merge @{u}*
   - *git branch -vv*: to show tracking branches
   - *git fetch --all*: fetches from all remotes
+
+- ## Rebasing
+  
+  - Exactly like merging but with a linear history
+  - it rebases the current branch into the target branch to add all the updates to it in its history
+  - then you can switch to that branch and merge
+  - *git rebase test main*
+  - *git switch main*
+  - *git merge test*
+  - *git branch {baseBranch} {topicBranch}*
+  - *git branch --onto {baseBranch} {subBaseBranch} {topicBranch}*: this rebases {topicBranch} into the {baseBranch} since it diverged from {subBaseBranch}
+  - don't repase when you have work ouside your repo that people may base work on
+  - *git pull --rebase*: to fix such a situation
+  - advise: use rebase to clean your work before pushing, but don't use it on something you pushed
