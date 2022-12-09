@@ -56,7 +56,7 @@
 
 - ### Git generally only adds data
 
-  - You can undo enything
+  - You can undo anything
 
 - ### The three states
 

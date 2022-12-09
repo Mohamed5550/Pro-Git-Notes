@@ -29,7 +29,7 @@
     - you can use multiple .gitignore files in different folders
 
   - Viewing staged and unstaged changes
-    - *git diff*: shows the files to be stagedcompares them
+    - *git diff*: shows the files to be staged and compares them
     - *git diff [--staged or --cached]*: shows the staged files but not committed and compares them
     - *git difftool to see the differences in a graphical tool that is installed in the system*
   
@@ -37,7 +37,7 @@
     - *git commit*: commit all staged files
     - -v adds the diff to the commit message
     - -m to write the commit message inline
-    - *git commit -a -m 'messae'* skipps stagging area
+    - *git commit -a -m 'message'* skipps stagging area
 
   - Removing files
     - *git rm file*: removes is from the staging area and from working tree
@@ -66,7 +66,7 @@
   - *git commit --amend*: redo last commit with new changes
 
   - Unstaging a staged file:
-    - *git reset HEAD*: removes he file from stagging area
+    - *git reset HEAD*: removes the file from stagging area
   
   - Unmodifying a modified file
     - *git checkout -- file*: discards the changes in the working tree
